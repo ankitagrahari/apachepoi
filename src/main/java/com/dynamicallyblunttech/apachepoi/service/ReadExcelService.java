@@ -15,8 +15,9 @@ import java.io.*;
 public class ReadExcelService {
 
     public String readExcel(String path){
-        System.out.println("ReadExcel:"+ path);
-        OPCPackage opc = null;
+        long start = System.currentTimeMillis();
+//        System.out.println("ReadExcel:"+ path);
+//        OPCPackage opc = null;
         try {
 //            File file = new File(path);
 //            opc = OPCPackage.open(file);
@@ -129,6 +130,7 @@ public class ReadExcelService {
 //                }
 //            }
         }
+        System.out.println("Time taken:"+ (System.currentTimeMillis() - start));
         return "Success";
     }
 }
